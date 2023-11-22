@@ -8,7 +8,6 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 String success = (String) request.getAttribute("success");
 %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +47,6 @@ String success = (String) request.getAttribute("success");
 				<%
 				}
 				%>
-
 
 				<table class="table table-bordered">
 					<div class="card mt-3">
@@ -90,11 +88,9 @@ String success = (String) request.getAttribute("success");
 						</div>
 					</tbody>
 
-
 				</table>
 
 			</div>
-
 
 			<!-- JavaScript (Opcional) -->
 			<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

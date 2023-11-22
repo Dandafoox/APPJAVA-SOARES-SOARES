@@ -65,9 +65,7 @@ public class ClienteController extends HttpServlet {
 
 		default:
 			System.out.println("Erro: Rota Inexistente");
-
 		}
-
 		if (acao.equals("/novocliente")) {
 			EnviaDados(request, response);
 		} else if (acao.equals("/buscacliente")) {
@@ -75,7 +73,6 @@ public class ClienteController extends HttpServlet {
 		} else if (acao.equals("/apagarcliente")) {
 			ApagaDados(request, response);
 		}
-
 	}
 
 	protected void BuscaDados(HttpServletRequest request, HttpServletResponse response)
