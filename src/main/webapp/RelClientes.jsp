@@ -7,6 +7,8 @@
 ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes");
 String success = (String) request.getAttribute("success");
 String q = (String) request.getAttribute("q");
+if (q == null)
+	q = "";
 %>
 
 <!DOCTYPE html>
@@ -40,14 +42,14 @@ String q = (String) request.getAttribute("q");
 							Cliente</a></li>
 				</ul>
 			</div>
-			
-			
+
+
 			<form name="buscacliente" action="pesquisacliente">
 				<input type="search" name="q" value="<%=q%>">
 				<button type="submit">🔎</button>
 			</form>
-			
-			
+
+
 			<%
 			if (success != null) {
 			%>
