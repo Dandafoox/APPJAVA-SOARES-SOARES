@@ -26,13 +26,21 @@ String success = (String) request.getAttribute("success");
 
 		<div class="my-5">
 
+<<<<<<< Updated upstream
 			<h4>Escritório Soares & Soares</h4>
+=======
+			<h4>EscritÃ³rio Soares & Soares</h4>
+>>>>>>> Stashed changes
 
 			<div class="my-5">
 
 				<ul class="nav">
 					<li class="nav-item"><a class="nav-link active"
+<<<<<<< Updated upstream
 						href="index.jsp">Início</a></li>
+=======
+						href="index.jsp">InicÃ­o</a></li>
+>>>>>>> Stashed changes
 					<li class="nav-item"><a class="nav-link"
 						href="CadAdvogado.jsp">Cadastro Advogado </a></li>
 					<li class="nav-item"><a class="nav-link" href="CadCliente.jsp">Cadastro

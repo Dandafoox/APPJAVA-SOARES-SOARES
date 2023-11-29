@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import util.Conexao;
 
@@ -70,8 +71,38 @@ public class AdvogadoDao {
 	}
 	
 	
-	
+	public List<Advogado>Editar(String id){
+		
+		List <Advogado> advogado = new ArrayList <>();
+		
+		try {
+			con = new Conexao().conectar();
+			String sql = "SELECT * from advogado WHERE idadv = ? AND statusadv = 'on'";
+			PreparedStatement stmt= con.prepareStatement(sql);
+			stmt.setString(1, id);
+			ResultSet rs = stmt.executeQuery();
+			rs.next();
+			int idadv= rs.getInt("idadv");
+			Date data = rs.getDate("dataadv");
+			String nome = rs.getString("nome");
+			String oab = rs.getString("oab");
+			String telefone = rs.getString("telefone");
+			String status = rs.getString("statusadv");
+			
+
+			
+			advogado.add(new Advogado (idadv, data, oab, nome, telefone, status));
+		
+			
+			
+		}catch (Exception erro) {
+			erro.printStackTrace();
+			
+			//TODO: handle exception
+		}
+		return advogado; 
 	
 	
 	
 }
+	}

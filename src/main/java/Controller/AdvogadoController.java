@@ -2,6 +2,7 @@ package Controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,10 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import model.Advogado;
 import model.AdvogadoDao;
 
+
 /**
  * Servlet implementation class AdvogadoController
  */
-@WebServlet({ "/AdvogadoController", "/novoadvogado", "/buscaadvogados","/apagaradvogado" })
+@WebServlet({ "/AdvogadoController", "/novoadvogado", "/buscaadvogados","/apagaradvogado","/editaradvogado","/salvaadvogado" })
 public class AdvogadoController extends HttpServlet {
 
 	Advogado adv = new Advogado();
@@ -49,6 +51,10 @@ public class AdvogadoController extends HttpServlet {
 			BuscaDados(request, response);
 		} else if (acao.equals("/apagaradvogado")) {
 			ApagaDados (request,response);
+		} else if (acao.equals("/editaradvogado")) {
+			EditaDados (request,response);
+		} else if (acao.equals("/salvaadvogado")) {
+			SalvaDados (request,response);
 		}
 	}
 
@@ -94,7 +100,25 @@ public class AdvogadoController extends HttpServlet {
 		
 	}
 		
-	
+	protected void EditaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String id = request.getParameter("id");
+		System.out.println ("id: "+id);
+		List<Advogado> advogado = daoadv.Editar(id);
+		request.setAttribute("advogado", advogado);
+		RequestDispatcher rd = request.getRequestDispatcher("EditAdvogado.jsp");
+		rd.forward(request, response);
+	}
+
+	protected void SalvaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		adv.setIdadv(Integer.parseInt(request.getParameter("id")));
+		adv.setNome(request.getParameter("nome"));
+		adv.setTelefone(request.getParameter("telefone"));
+		daoadv.Salvar(adv);
+		request.setAttribute("success", "Advogado atualizado com sucesso!");
+		request.getRequestDispatcher("buscaadvogado").forward(request, response);
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse

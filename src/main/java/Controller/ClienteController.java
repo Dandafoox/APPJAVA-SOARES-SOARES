@@ -19,7 +19,7 @@ import model.ClienteDao;
  * Servlet implementation class ClienteController
  */
 @WebServlet({ "/ClienteController", "/novocliente", "/buscacliente", "/apagarcliente", "/editarcliente",
-		"/salvacliente" })
+		"/salvacliente", "/pesquisacliente" })
 
 public class ClienteController extends HttpServlet {
 
@@ -61,6 +61,9 @@ public class ClienteController extends HttpServlet {
 			break;
 		case "/salvacliente":
 			SalvaDados(request, response);
+			break;
+		case "/pesquisacliente":
+			PesquisaDados(request, response);
 			break;
 
 		default:
@@ -123,6 +126,19 @@ public class ClienteController extends HttpServlet {
 		daocli.Salvar(cli);
 		request.setAttribute("success", "Cliente editado com sucesso!");
 		request.getRequestDispatcher("buscacliente").forward(request, response);
+	}
+	
+	protected void PesquisaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String q = request.getParameter("q");
+		ArrayList<Cliente> lista = daocli.Pesquisar(q);
+		String success = (String) request.getAttribute("success");
+		if (success != null)
+			request.setAttribute("success", success);
+		request.setAttribute("clientes", lista);
+		request.setAttribute("q", q);
+		RequestDispatcher rd = request.getRequestDispatcher("RelClientes.jsp");
+		rd.forward(request, response);
 	}
 
 }
