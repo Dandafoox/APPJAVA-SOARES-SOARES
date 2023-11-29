@@ -73,41 +73,37 @@ public class ClienteDao {
 		}
 
 	}
-	
-	
-	public List<Cliente>Editar(String id){
-		
-		List <Cliente> cliente = new ArrayList <>();
-		
+
+	public List<Cliente> Editar(String id) {
+
+		List<Cliente> cliente = new ArrayList<>();
+
 		try {
 			con = new Conexao().conectar();
 			String sql = "SELECT * from cliente WHERE idcliente = ? AND statuscliente = 'on'";
-			PreparedStatement stmt= con.prepareStatement(sql);
+			PreparedStatement stmt = con.prepareStatement(sql);
 			stmt.setString(1, id);
 			ResultSet rs = stmt.executeQuery();
 			rs.next();
-			int idcliente= rs.getInt("idcliente");
+			int idcliente = rs.getInt("idcliente");
 			Date data = rs.getDate("datacliente");
 			String nome = rs.getString("nome");
 			String telefone = rs.getString("telefone");
 			String status = rs.getString("statuscliente");
-			
 
-			
-			cliente.add(new Cliente (idcliente, data, nome, telefone, status));
-		return cliente;
-			
-			
+			cliente.add(new Cliente(idcliente, data, nome, telefone, status));
+			return cliente;
+
 		} catch (Exception erro) {
 			erro.printStackTrace();
-			
-			//TODO: handle exception
-		} 
- 
+
+			// TODO: handle exception
+		}
+
 		return null;
-		
+
 	}
-	
+
 	public void Atualizar(Cliente cli) {
 		try {
 			con = new Conexao().conectar();
@@ -125,7 +121,6 @@ public class ClienteDao {
 		}
 	}
 
-	
 	public ArrayList<Cliente> Pesquisar(String q) {
 		try {
 			con = new Conexao().conectar();
@@ -152,6 +147,6 @@ public class ClienteDao {
 			System.out.println(erro);
 			return null;
 		}
-}
-	
+	}
+
 }

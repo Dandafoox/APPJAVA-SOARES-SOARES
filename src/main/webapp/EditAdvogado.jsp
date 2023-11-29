@@ -50,14 +50,14 @@ String success = (String) request.getAttribute("success");
 					<div class="my-5">
 
 						<div class="card mt-3">
-							<h5 class="card-header">Cadastro de Cliente</h5>
+							<h5 class="card-header">Atualizar Advogado</h5>
 							<div class="card-body">
 
 
 								<div class="form-group shadow-sm p-3 mb-5 bg-white rounded">
 									<label for="telefone">OAB</label> <input type="text"
 										class="form-control" id="formGroupExampleInput2"
-										name="telefone" value="<%=advogado.get(0).getOab()%>">
+										name="oab" value="<%=advogado.get(0).getOab()%>">
 								</div>
 								<div class="form-group shadow-sm p-3 mb-5 bg-white rounded">
 									<label for="nome">Nome</label> <input type="text"
