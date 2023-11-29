@@ -73,7 +73,8 @@ public class ClienteDao {
 		}
 
 	}
-
+	
+	
 	public List<Cliente>Editar(String id){
 		
 		List <Cliente> cliente = new ArrayList <>();
@@ -94,20 +95,38 @@ public class ClienteDao {
 
 			
 			cliente.add(new Cliente (idcliente, data, nome, telefone, status));
-		
+		return cliente;
 			
 			
-		}catch (Exception erro) {
+		} catch (Exception erro) {
 			erro.printStackTrace();
 			
 			//TODO: handle exception
-		}
-		return cliente; 
+		} 
  
-	}	
+		return null;
+		
+	}
+	
+	public void Atualizar(Cliente cli) {
+		try {
+			con = new Conexao().conectar();
+			// String sql = "insert into cliente(nome, telefone) values (?, ?)";
+			String sql = "UPDATE cliente SET nome = ?, telefone = ? WHERE idcliente = ? AND statuscliente = 'on'";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, cli.getNome());
+			stmt.setString(2, cli.getTelefone());
+			stmt.setInt(3, cli.getIdcliente());
+			stmt.executeUpdate();
+			stmt.close();
+			con.close();
+		} catch (Exception erro) {
+			erro.printStackTrace();
+		}
+	}
 
+	
 	public ArrayList<Cliente> Pesquisar(String q) {
-		// TODO Auto-generated method stub
 		try {
 			con = new Conexao().conectar();
 			ArrayList<Cliente> clientes = new ArrayList<>();
@@ -117,7 +136,7 @@ public class ClienteDao {
 			stmt.setString(1, q);
 			stmt.setString(2, q);
 			rs = stmt.executeQuery();
-			
+
 			while (rs.next()) {
 				int idcliente = rs.getInt("idcliente");
 				Date data = rs.getDate("datacliente");
@@ -126,12 +145,13 @@ public class ClienteDao {
 				String status = rs.getString("statuscliente");
 				clientes.add(new Cliente(idcliente, data, nome, telefone, status));
 			}
+
 			return clientes;
-			
-		}catch (Exception erro) {
+
+		} catch (Exception erro) {
 			System.out.println(erro);
 			return null;
 		}
-		
-	}
-		}
+}
+	
+}
