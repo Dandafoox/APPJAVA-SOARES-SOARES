@@ -30,6 +30,7 @@
 				</ul>
  <style>
         body {
+         	
             font-family: Tahoma, sans-serif;
             margin: 0;
             padding: 0;
@@ -53,5 +54,9 @@
         nav a:hover {
             background-color: #ddd;
             color: black;
+        }
+        
+        h1 {
+        text-align: center;
         }
     </style>
