@@ -1,34 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-<meta charset="ISO-8859-1">
-<title>Menu</title>
-</head>
-<body>
-	<div class="container">
-
-		<div class="my-5">
-
-			<h1>EscritÃ³rio Soares & Soares</h1>
-
-			<div class="my-5">
-
-
-				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active"
-						href="index.jsp">InÃ­cio</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="CadAdvogado.jsp">Cadastro Advogado</a></li>
-					<li class="nav-item"><a class="nav-link" href="CadCliente.jsp">Cadastro
-							Cliente</a></li>
-				</ul>
-
+<%@ include file="./_header.jsp"%>
 			
 				<div class="my-5">
 
@@ -55,39 +25,39 @@
 						</a> <a class="carousel-control-next" href="#carouselExampleControls"
 							role="button" data-slide="next"> <span
 							class="carousel-control-next-icon" aria-hidden="true"></span> <span
-							class="sr-only">PrÃ³ximo</span>
+							class="sr-only">Próximo</span>
 						</a>
 					</div>
 
 					<div class="my-5">
 
 						<div class="jumbotron">
-							<h1 class="display-4">RepresentaÃ§Ã£o Legal de Alta Qualidade</h1>
+							<h1 class="display-4">Representação Legal de Alta Qualidade</h1>
 							<div class="my-4">
-								<p class="lead">"Nosso escritÃ³rio de advocacia tem uma
-									histÃ³ria sÃ³lida de ajudar nossos clientes a superar desafios
-									legais com sucesso. Fundamos o escritÃ³rio com um grupo de
-									advogados experientes, e nossa missÃ£o sempre foi fornecer
-									representaÃ§Ã£o legal de alta qualidade, com base em princÃ­pios
+								<p class="lead">"Nosso escritório de advocacia tem uma
+									história sólida de ajudar nossos clientes a superar desafios
+									legais com sucesso. Fundamos o escritório com um grupo de
+									advogados experientes, e nossa missão sempre foi fornecer
+									representação legal de alta qualidade, com base em princípios
 									de integridade e comprometimento. Eu, como um dos advogados que
-									lideram o escritÃ³rio, tenho orgulho de dizer que construÃ­mos
-									uma reputaÃ§Ã£o sÃ³lida de resoluÃ§Ã£o de casos complexos, desde
-									disputas comerciais atÃ© questÃµes de famÃ­lia delicadas. Nossos
-									clientes sabem que estÃ£o em boas mÃ£os, e eles confiam que nÃ£o
-									apenas entendemos a lei, mas tambÃ©m nos importamos genuinamente
-									com seus casos. Em nossa pÃ¡gina 'Sobre o EscritÃ³rio', gostaria
-									de compartilhar nossa histÃ³ria e compromisso com a excelÃªncia.
-									Desde nossa fundaÃ§Ã£o atÃ© o presente, destacamos nossa abordagem
-									Ãºnica para atender Ã s necessidades legais de nossos clientes.
-									Acreditamos em construir relacionamentos sÃ³lidos e na busca
-									contÃ­nua pela justiÃ§a, e isso Ã© o que nos torna um destino
-									confiÃ¡vel para aqueles que precisam de orientaÃ§Ã£o jurÃ­dica de
+									lideram o escritório, tenho orgulho de dizer que construímos
+									uma reputação sólida de resolução de casos complexos, desde
+									disputas comerciais até questões de família delicadas. Nossos
+									clientes sabem que estão em boas mãos, e eles confiam que não
+									apenas entendemos a lei, mas também nos importamos genuinamente
+									com seus casos. Em nossa página 'Sobre o Escritório', gostaria
+									de compartilhar nossa história e compromisso com a excelência.
+									Desde nossa fundação até o presente, destacamos nossa abordagem
+									única para atender às necessidades legais de nossos clientes.
+									Acreditamos em construir relacionamentos sólidos e na busca
+									contínua pela justiça, e isso é o que nos torna um destino
+									confiável para aqueles que precisam de orientação jurídica de
 									alta qualidade."</p>
 
 
 								<hr class="my-4">
 								<footer class="blockquote-footer">
-									EscritÃ³rio <cite title="TÃ­tulo da fonte">Soares&Soares</cite>
+									Escritório <cite title="Título da fonte">Soares&Soares</cite>
 								</footer>
 							</div>
 
@@ -98,22 +68,22 @@
 								<div class="col-sm-4">
 									<div class="card">
 										<div class="card-body">
-											<h5 class="card-title">Consultoria JurÃ­dica:</h5>
-											<p class="card-text">Fornecer orientaÃ§Ã£o legal sobre
-												questÃµes especÃ­ficas, como contratos, regulamentaÃ§Ãµes e
+											<h5 class="card-title">Consultoria Jurídica:</h5>
+											<p class="card-text">Fornecer orientação legal sobre
+												questões específicas, como contratos, regulamentações e
 												conformidade legal.</p>
-											<a href="#" class="btn btn-primary">InformaÃ§Ãµes</a>
+											<a href="#" class="btn btn-primary">Informações</a>
 										</div>
 									</div>
 								</div>
 								<div class="col-sm-4">
 									<div class="card">
 										<div class="card-body">
-											<h5 class="card-title">RepresentaÃ§Ã£o em Tribunais:</h5>
+											<h5 class="card-title">Representação em Tribunais:</h5>
 											<p class="card-text">Defender os interesses dos clientes
-												em processos judiciais, incluindo litÃ­gios civis, criminais
+												em processos judiciais, incluindo litígios civis, criminais
 												e administrativos.</p>
-											<a href="#" class="btn btn-primary">InformaÃ§Ãµes</a>
+											<a href="#" class="btn btn-primary">Informações</a>
 										</div>
 									</div>
 								</div>
@@ -122,10 +92,10 @@
 									<div class="card">
 										<div class="card-body">
 											<h5 class="card-title">Direito do Trabalho:</h5>
-											<p class="card-text">Oferecer orientaÃ§Ã£o sobre questÃµes
-												trabalhistas, como contratos de trabalho, demissÃµes e
-												discriminaÃ§Ã£o.</p>
-											<a href="#" class="btn btn-primary">InformaÃ§Ãµes</a>
+											<p class="card-text">Oferecer orientação sobre questões
+												trabalhistas, como contratos de trabalho, demissões e
+												discriminação.</p>
+											<a href="#" class="btn btn-primary">Informações</a>
 										</div>
 									</div>
 								</div>
@@ -144,19 +114,19 @@
 
 											<h5 class="card-title">"Como Evitar Problemas Legais em
 												Contratos de Trabalho"</h5>
-											<p class="card-text">Contratos de trabalho sÃ£o uma parte
-												fundamental de qualquer negÃ³cio. Eles estabelecem as bases
-												da relaÃ§Ã£o empregador-empregado e sÃ£o projetados para
+											<p class="card-text">Contratos de trabalho são uma parte
+												fundamental de qualquer negócio. Eles estabelecem as bases
+												da relação empregador-empregado e são projetados para
 												proteger ambas as partes. No entanto, problemas legais podem
-												surgir quando esses contratos nÃ£o sÃ£o redigidos de forma
+												surgir quando esses contratos não são redigidos de forma
 												adequada. Neste artigo, exploraremos as principais
 												armadilhas a serem evitadas ao criar contratos de trabalho e
-												forneceremos orientaÃ§Ãµes para garantir que seu negÃ³cio
+												forneceremos orientações para garantir que seu negócio
 												esteja em conformidade com as leis trabalhistas.</p>
 
 											<p class="card-text">
 												<small class="text-muted">Atualizados 3 minutos
-													atrÃ¡s</small>
+													atrás</small>
 											</p>
 										</div>
 									</div>
@@ -164,20 +134,20 @@
 										<img class="card-img-top" src="./img/adv (5).jpg"
 											alt="Imagem de capa do card">
 										<div class="card-body">
-											<h5 class="card-title">EstratÃ©gias para Proteger Sua
+											<h5 class="card-title">Estratégias para Proteger Sua
 												Propriedade Intelectual</h5>
 											<p class="card-text">Para muitas empresas, a propriedade
-												intelectual Ã© um ativo valioso que precisa ser protegido.
+												intelectual é um ativo valioso que precisa ser protegido.
 												Isso inclui marcas registradas, patentes e direitos
-												autorais. Neste artigo, examinaremos a importÃ¢ncia da
-												proteÃ§Ã£o da propriedade intelectual e discutiremos
-												estratÃ©gias eficazes para garantir que suas inovaÃ§Ãµes e
-												criaÃ§Ãµes estejam seguras contra violaÃ§Ãµes. Se vocÃª Ã© um
+												autorais. Neste artigo, examinaremos a importância da
+												proteção da propriedade intelectual e discutiremos
+												estratégias eficazes para garantir que suas inovações e
+												criações estejam seguras contra violações. Se você é um
 												empreendedor, inventor ou artista, esta leitura pode ser
-												crucial para proteger seu trabalho e inovaÃ§Ãµes.</p>
+												crucial para proteger seu trabalho e inovações.</p>
 											<p class="card-text">
 												<small class="text-muted">Atualizados 3 minutos
-													atrÃ¡s</small>
+													atrás</small>
 											</p>
 										</div>
 									</div>
@@ -185,21 +155,21 @@
 										<img class="card-img-top" src="./img/adv (4).jpg"
 											alt="Imagem de capa do card">
 										<div class="card-body">
-											<h5 class="card-title">Guia para Entender CustÃ³dia de
-												Filhos em Casos de DivÃ³rcio</h5>
-											<p class="card-text">O divÃ³rcio Ã© um momento
-												emocionalmente desafiador, especialmente quando hÃ¡ filhos
-												envolvidos. Um dos principais aspectos a serem resolvidos Ã©
-												a custÃ³dia dos filhos. Neste guia, vamos abordar as
-												diferentes formas de custÃ³dia de filhos em casos de
-												divÃ³rcio, desde a custÃ³dia conjunta atÃ© a custÃ³dia
+											<h5 class="card-title">Guia para Entender Custódia de
+												Filhos em Casos de Divórcio</h5>
+											<p class="card-text">O divórcio é um momento
+												emocionalmente desafiador, especialmente quando há filhos
+												envolvidos. Um dos principais aspectos a serem resolvidos é
+												a custódia dos filhos. Neste guia, vamos abordar as
+												diferentes formas de custódia de filhos em casos de
+												divórcio, desde a custódia conjunta até a custódia
 												exclusiva. Vamos explorar como os tribunais tomam suas
-												decisÃµes e oferecer conselhos para os pais que buscam o
+												decisões e oferecer conselhos para os pais que buscam o
 												melhor interesse de seus filhos durante esse processo
-												sensÃ­vel.</p>
+												sensível.</p>
 											<p class="card-text">
 												<small class="text-muted">Atualizados 3 minutos
-													atrÃ¡s</small>
+													atrás</small>
 											</p>
 										</div>
 									</div>
@@ -213,46 +183,4 @@
 						</div>
 						<div>
 
-
-							<footer>
-								<div class="footer-container">
-									<div class="footer-contact-info">
-										<h3>InformaÃ§Ãµes de Contato</h3>
-										<p>
-											<strong>EndereÃ§o:</strong> Rua da Advocacia, 1234
-										</p>
-										<p>
-											<strong>Telefone:</strong> (11) 1234-5678
-										</p>
-										<p>
-											<strong>E-mail:</strong> contato@seu-escritorio.com
-										</p>
-									</div>
-									<div class="footer-map">
-
-										<iframe
-											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29385.723319806!2d-44.02050654958495!3d-22.979104844369488!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c6beeb750b487%3A0xbcf1469ea5346af2!2sPraia%20de%20Junqueira!5e0!3m2!1spt-BR!2sbr!4v1699895512103!5m2!1spt-BR!2sbr"
-											width="300" height="250" style="border: 0;"
-											allowfullscreen="" loading="lazy"
-											referrerpolicy="no-referrer-when-downgrade"></iframe>
-									</div>
-								</div>
-							</footer>
-
-
-
-
-						</div>
-						<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-							integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-							crossorigin="anonymous"></script>
-						<script
-							src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-							integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-							crossorigin="anonymous"></script>
-						<script
-							src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-							integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-							crossorigin="anonymous"></script>
-</body>
-</html>
+<%@ include file="./_footer.jsp"%>

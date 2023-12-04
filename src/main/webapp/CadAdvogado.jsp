@@ -1,40 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Cadastro de causas</title>
+<%@ include file="./_header.jsp"%>
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
 
-</head>
-<body>
 
 	<div class="container mt-3">
 		<form action="novoadvogado">
 
 
-			<div class="my-5">
 
-				<h4>Escritório Soares & Soares - Cadastro</h4>
-
-				<div class="my-5">
-
-
-
-			<ul class="nav">
-					<li class="nav-item"><a class="nav-link active"
-						href="index.jsp">Início</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="CadAdvogado.jsp">Cadastro Advogado</a></li>
-					<li class="nav-item"><a class="nav-link" href="CadCliente.jsp">Cadastro
-							Cliente</a></li>
-				</ul>
 
 					<div class="my-5">
 
@@ -69,7 +41,7 @@
 					<div class="my-5">
 					
 						<div class="card mt-3">
-							<h5 class="card-header">Relatório de Advogados</h5>
+							<h5 class="card-header">Relat�rio de Advogados</h5>
 
 							<div class="card-body">
 								<h5 class="card-title">Advogados</h5>
