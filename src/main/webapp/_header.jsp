@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,7 +7,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Menu</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
 				</ul>
  <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Tahoma, sans-serif;
             margin: 0;
             padding: 0;
         }

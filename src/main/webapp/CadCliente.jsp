@@ -1,39 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Cadastro de Cliente</title>
-
-<!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-
-</head>
-<body>
-
-	<div class="container">
-		<form action="novocliente">
-
-
-			<div class="my-5">
-
-				<h4>Escritório Soares & Soares - Cadastro</h4>
-
-				<div class="my-5">
-
-					<ul class="nav">
-						<li class="nav-item"><a class="nav-link active"
-							href="index.jsp">Início</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="CadAdvogado.jsp">Cadastro Advogado</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="CadCliente.jsp">Cadastro Cliente</a></li>
-						</li>
-					</ul>
+<%@ include file="./_header.jsp"%>
 
 					<div class="my-5">
 						<div class="card mt-3">
@@ -41,7 +6,7 @@
 							<div class="card-body">
 
 								<div class="form-group shadow-sm p-3 mb-5 bg-white rounded mt-3">
-									<label for="idcliente">Código do Cliente</label> <input
+									<label for="idcliente">C�digo do Cliente</label> <input
 										type="text" class="form-control" id="" name="idcliente">
 								</div>
 
@@ -63,7 +28,7 @@
 						</div>
 
 						<div class="card mt-5">
-							<h5 class="card-header">Relatório de Cliente</h5>
+							<h5 class="card-header">Relat�rio de Cliente</h5>
 
 							<div class="card-body">
 								<h5 class="card-title">Clientes</h5>
@@ -87,6 +52,8 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
+
+<%@ include file="./_footer.jsp"%>
 
 </body>
 </html>

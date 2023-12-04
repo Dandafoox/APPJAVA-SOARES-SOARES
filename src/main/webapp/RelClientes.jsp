@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ include file="./_header.jsp"%>
 
 <%@page import="model.Cliente"%>
 <%@page import="java.util.ArrayList"%>
@@ -8,43 +7,6 @@ ArrayList<Cliente> lista = (ArrayList<Cliente>) request.getAttribute("clientes")
 String success = (String) request.getAttribute("success");
 %>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Listagem de Clientes</title>
-
-<!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-</head>
-<body>
-
-	<div class="container">
-
-		<div class="my-5">
-
-
-			<h4>Escritório Soares & Soares</h4>
-
-
-			<div class="my-5">
-
-				<ul class="nav">
-					<li class="nav-item"><a class="nav-link active"
-						href="index.jsp">Início</a></li>
-
-
-
-					<li class="nav-item"><a class="nav-link"
-						href="CadAdvogado.jsp">Cadastro Advogado </a></li>
-					<li class="nav-item"><a class="nav-link" href="CadCliente.jsp">Cadastro
-							Cliente</a></li>
-
-				</ul>
-			</div>
 
 			<%
 			if (success != null) {

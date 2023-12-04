@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="UTF-8"%>
+
+<%@ include file="./_header.jsp"%>
 
 <%@ page import="model.Advogado"%>
 <%@ page import="java.util.ArrayList"%>
@@ -9,37 +9,7 @@ String success = (String) request.getAttribute("success");
 %>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Lista de Advogados</title>
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
-</head>
-<body>
-	<div class="container">
-
-
-		<div class="my-5">
-
-			<h4>Escritório Soares & Soares</h4>
-		</div>
-
-		<div class="my-5">
-
-			<ul class="nav">
-				<li class="nav-item"><a class="nav-link active"
-					href="index.jsp">Início</a></li>
-				<li class="nav-item"><a class="nav-link" href="CadAdvogado.jsp">Cadastro
-						Advogado </a></li>
-				<li class="nav-item"><a class="nav-link" href="CadCliente.jsp">Cadastro
-						Cliente</a></li>
-			</ul>
-		</div>
 		<form name="buscaadvogado" action="pesquisaadvogado">
 			<input type="search" name="q" value="">
 			<button type="submit">🔎</button>
